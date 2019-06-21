@@ -1,0 +1,141 @@
+[canals]
+	[canal.database1]
+    cancalconfigpath = "canalconfigs/database1.toml"
+	posconfigfile = "canalconfigs/database1.pos"
+    bulksize = 1000
+    flushbulktime = 5000
+	cachesize = 1000
+#		[canal.database1.redis]
+#		address = "10.0.90.164:6379"
+#		password = ""
+#		db = 0
+#			[canal.database1.redis.tables.t1]
+#			tablename = "t1"
+#			actions = ["delete","update","insert"]
+#			struct = "hash" # string, list, set, hash
+#			key = ["id","location_id"]
+#			keysplit = "-"
+#			keyprefix = "t3"
+#			keypostfix = "end"
+#			valuetype = "json" # json, splitstring
+#			valuesplit = "-"
+#			splitcolumns = [""]
+#			reidskey = "zztest1" #list, set, hash
+#		[canal.database1.redis-cluster]
+#		address = ["10.0.71.50:7001","10.0.71.50:7006","10.0.71.52:7003","10.0.71.52:7005","10.0.71.51:7002","10.0.71.51:7004"]
+#		readtimeout = 2 #s
+#		conntimeout = 2 #s
+#		writetimeout = 2 #s
+#		alivetime = 60 #s
+#		keepalive = 100
+#			[canal.database1.redis-cluster.tables.t1]
+#			tablename = "t1"
+#			actions = ["delete","update","insert"]
+#			struct = "hash" # string, list, set, hash 
+#			key = ["id","location_id"]
+#			keysplit = "-"
+#			keyprefix = "t3"
+#			keypostfix = "end"
+#			valuetype = "json" # json, splitstring
+#			valuesplit = "-"
+#			splitcolumns = [""]
+#			reidskey = "zztest1" #list, set, hash
+		[canal.database1.elasticsearch]
+		#address = "http://10.0.91.125:9200"
+		#address = "http://es-cn-4590ox5kl000avgam.elasticsearch.aliyuncs.com:9200"
+		address = "http://172.19.1.205:9200"
+		user = "elastic"
+		password = "AkcTest2018"
+		ishttps = false
+		   	[canal.database1.elasticsearch.tables.t1]
+			tablename = "ztest"
+			actions = ["delete","update","insert"]
+			index = "dadacang_t1"
+			indextype = "type1"
+			key = ["id","location_id"]
+			keysplit = "-"
+			keyprefix = "t3"
+			keypostfix = "end"
+#		[canal.database1.kafka]
+###		address = ["10.0.91.85:9092","10.0.91.114:9092","10.0.91.150:9092"]
+#		address = "10.0.91.85:9092"
+#			[canal.database1.kafka.tables.t1]
+#			tablename = "t1"
+#			actions = ["delete","update","insert"]
+#			topic = ["demo1"]
+#		[canal.database1.datafile]
+#		filename = "datafile/1.data"
+   
+
+#	[canal.database2]
+#    cancalconfigpath = "canalconfigs/database2.toml"
+#	posconfigfile = "canalconfigs/database2.pos"
+#    bulksize = 1000
+#    flushbulktime = 5000
+#	cachesize = 1000
+#		[canal.database2.redis]
+#		address = "10.0.90.164:6379"
+#		password = ""
+#		db = 1
+#			[canal.database2.redis.tables.t1]
+#			tablename = "t1"
+#			actions = ["delete","update","insert"]
+#			struct = "hash" # string, list, set, hash, zset
+#			key = ["id","location_id"]
+#			keysplit = "-"
+#			keyprefix = "t3"
+#			keypostfix = "end"
+#			valuetype = "json" # json, splitstring
+#			valuesplit = "-"
+#			splitcolumns = [""]
+#			reidskey = "zztest2" #list, set, hash, zset
+#		[canal.database2.redis-cluster]
+#		address = ["10.0.71.50:7001","10.0.71.50:7006","10.0.71.52:7003","10.0.71.52:7005","10.0.71.51:7002","10.0.71.51:7004"]
+#		readtimeout = 2 #s
+#		conntimeout = 2 #s
+#		writetimeout = 2 #s
+#		alivetime = 60 #s
+#		keepalive = 100
+#			[canal.database2.redis-cluster.tables.t1]
+#			tablename = "t1"
+#			actions = ["delete","update","insert"]
+#			struct = "hash" # string, list, set, hash, zset
+#			key = ["id","location_id"]
+#			keysplit = "-"
+#			keyprefix = "t3"
+#			keypostfix = "end"
+#			valuetype = "json" # json, splitstring
+#			valuesplit = "-"
+#			splitcolumns = [""]
+#			reidskey = "zztest2" #list, set, hash, zset
+#		[canal.database2.elasticsearch]
+#		address = "http://10.0.91.125:9200"
+#		user = ""
+#		password = ""
+#		ishttps = false
+#		   	[canal.database2.elasticsearch.tables.t1]
+#			tablename = "t1"
+#			actions = ["delete","update","insert"]
+#			index = "t2_index"
+#			indextype = "type1"
+#			key = ["id","location_id"]
+#			keysplit = "-"
+#			keyprefix = "t3"
+#			keypostfix = "end"
+#		[canal.database2.kafka]
+##		address = ["10.0.91.85:9092","10.0.91.114:9092","10.0.91.150:9092"]
+#		address = "10.0.91.85:9092"
+#			[canal.database2.kafka.tables.t1]
+#			tablename = "t1"
+#			actions = ["delete","update","insert"]
+#			topic = ["demo2"]
+#		[canal.database2.datafile]
+#		filename = "datafile/2.data"
+
+#    [canal.database2]
+#    cancalconfigpath = "canalconfigs/database2.toml"
+#    bulksize = 200
+#    flushbulktime = 5000
+#	cachesize = 1000
+#        [canal.database2.redis]
+#		address = ["10.0.91.85:9092"]
