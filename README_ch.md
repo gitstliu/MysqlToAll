@@ -16,7 +16,7 @@ xxx.pos binlog解析位置文件
 ```
 config.toml 输出源配置文件
 ```
-<img  src="https://github.com/gitstliu/MysqlToAll/blob/master/diss_config.png"  alt="具体用法" align=center />
+<img  src="https://github.com/gitstliu/MysqlToAll/blob/master/diss_config_ch.png"  alt="具体用法" align=center />
 
 
 # 性能测试数据
