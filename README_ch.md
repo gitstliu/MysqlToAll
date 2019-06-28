@@ -4,7 +4,20 @@
 
 高性能
 
-## 性能测试数据
+# 配置方法
+
+## canalconfigs
+```
+xxx.toml canal配置文件
+xxx.pos binlog解析位置文件
+```
+
+## config
+```
+config.toml 输出源配置文件
+```
+
+# 性能测试数据
 
 测试机4C 8G
 
