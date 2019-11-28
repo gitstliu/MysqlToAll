@@ -19,6 +19,9 @@ config.toml (Output source config file)
 ```
 <img  src="https://github.com/gitstliu/MysqlToAll/blob/master/diss_config.png"  alt="具体用法" align=center />
 
+## QQ
+<img  src="https://github.com/gitstliu/MysqlToAll/blob/master/QQ%E7%BE%A4%E5%90%8D%E7%89%87.png"  alt="QQ群" align=center />
+
 
 # Performance Test Data
 
