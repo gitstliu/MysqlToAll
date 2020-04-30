@@ -1,8 +1,25 @@
 # MysqlToAll
 
-将mysql数据以指定的格式同步到redis、redis-cluster、kafka、es、本地文件系统的工具
+(部分功能未开源)
+用途:
+1. mysql到NoSQL,如ES、Redis、mongodb
+2. mysql数据迁移,如postgresql
+3. mysql到数据分析平台做数据聚合,如TiDB(待测试)
+4. 数据审计
 
-高性能
+特点:
+1. 支持多数据源多接收方
+2. 单数据源配置多接收方时,支持近似数据同步(在出错的情况下可能相差最后一批数据)
+3. redis及redis-cluster支持key格式化配置,支持json和分割字符串两种方式的数据存储。支持多种数据类型的处理
+4. mongodb支持audit模式(可以把指定数据表的变化存入mongodb)和normal两种模式,并支持高速模式(打开时不支持upsert,关闭支持upsert)可以完全发挥mongodb的高性能
+5. postgresql不支持upsert
+6. mysql支持upsert(实现mysql的目的是为了支持TIDB)
+7. 高性能,大部分中间件的数据同步在每秒5w条左右(性能会随着表列数增加而下降,随着同步中间的数量增多而下降)
+
+注意:
+1. 尽量选择支持upsert的用法
+2. 尽量不要直接连接主库,而选择连接从库,以降低对主库的性能损耗
+3. 一个数据源不要配置过多的接收方,这样会造成性能下降迅速(不要超过5个)
 
 # 配置方法
 
