@@ -36,9 +36,12 @@ config.toml 输出源配置文件
 ```
 <img  src="https://github.com/gitstliu/MysqlToAll/blob/master/diss_config_ch.png"  alt="具体用法" align=center />
 
-## QQ
-<img  src="https://github.com/gitstliu/MysqlToAll/blob/master/QQ%E7%BE%A4%E5%90%8D%E7%89%87.png"  alt="QQ群" align=center />
-加群的目的是? MysqlToAll
+## QQ群
+
+691944436
+
+
+答案: zero
 
 
 # 性能测试数据
